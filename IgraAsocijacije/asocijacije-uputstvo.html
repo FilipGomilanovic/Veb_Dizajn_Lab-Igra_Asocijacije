@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="skripta.js"></script>
+    <link rel="stylesheet" href="dizajn.css">
+</head>
+<style>
+    input[type="text"]
+    {
+        background: transparent;
+        border-style: ridge;
+        font-size: 25px;
+        color:white;
+        width: 20%;
+        text-align: center;
+    }
+
+    input::placeholder {
+        color: rgb(140, 140, 140);
+        font-size : 25px;
+    }
+
+
+    input[type="text"]:focus{    
+        background: transparent;
+        border-style: ridge;
+        outline-width: 0;
+    }
+    
+</style>
+<body onload="izbrisiStare()" style="text-align: center">
+    <h1 style="color:red; text-align: center;" >Pravila:</h1>
+    <p style="color: white; font-size: 25px;">U igri asocijacije treba prvo rešiti četiri sporedne asocijacije, a zatim pomoću 4 dobijena pojma rešiti glavnu asocijaciju. Rešenje svake asocijacije je neki pojam na koji asociraju četiri pojma u njegovoj koloni. Na početku su svi pojmovi skriveni, i igrači naizmenično otkrivaju jedan po jedan. Nakon otkrivanja svakog pojma, igrač dobija pravo da jednom pogađa glavnu ili sporednu asocijaciju. Za rešenje sporedne asocijacije se dobija <u>5 poena plus broj neotkrivenih pojmova u njegovoj koloni.</u> Za rešenje glavne asocijacije se dobija <u>10 poena plus broj svih neotkrivenih polja, plus 5 poena za svako rešenje sporedne asocijacije. Prvi igrač je plave, a drugi crvene boje. Nakon otkrivanja pojma u nekom polju igrač može pokušati da pogodi rešenje neke od kolona ili glavno rešenje. U slučaju da pogodi rešenje neke kolone može odmah nakon toga pokušati i glavno rešenje.</u></p>
+    <h1 style="color:red; text-align: center;" >Kako se igra?</h1>
+    <p style="color: white; font-size: 25px;">Levim tasterom miša vršite odabir željenog polja. U slučaju da kucate rešenje neke od asocijacija, kao potvrdu unetog teksta koristite taster <mark>ENTER</mark></p>
+    <hr>
+    <p style="color: white; font-size: 25px;">Ako ste pročitali upustvo, unesite imena igrača i kliknite na drugme <mark>Potvrdi</mark></p>
+
+    <input id="igrac1" type="text" placeholder="IGRAČ_1">
+    <input id="igrac2" type="text" placeholder="IGRAČ_2">
+    <br>
+    <button type="button" class="btn btn-primary" onclick="ucitajIgrace()" id="potvrdi" style = "height: 40px; width: 10%; margin-top: 10px;">Potvrdi</button>
+</body>
+</html>
